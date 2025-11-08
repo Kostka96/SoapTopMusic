@@ -10,6 +10,8 @@ print("SoapTopMusic v1.0")
 load_dotenv()
 DISCORD_TOKEN = os.environ.get("DISCORD_BOT_TOKEN")
 
+print(DISCORD_TOKEN)
+
 # Настройки для youtube_dl
 ytdl_format_options = {
     'format': 'bestaudio/best',
@@ -69,7 +71,7 @@ queues = {}
 async def on_ready():
     print(f'Бот {discord_bot.user.name} успешно запущен!')
 
-    activity = discord.CustomActivity(name="Жирный гей")  # Здесь можно поменять текст
+    activity = discord.CustomActivity(name="Бабурин гей")  # Здесь можно поменять текст
     await discord_bot.change_presence(status=discord.Status.online, activity=activity)
 async def play_next(ctx):
     """Функция вызывается автоматически после завершения текущего трека."""
