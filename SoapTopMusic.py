@@ -1,11 +1,15 @@
+import os
+
 import discord
 from discord.ext import commands
 import asyncio
 import yt_dlp as youtube_dl
 import functools
+from dotenv import load_dotenv
 print("SoapTopMusic v1.0")
+load_dotenv()
+DISCORD_TOKEN = os.environ.get("DISCORD_BOT_TOKEN")
 
-DISCORD_TOKEN = "MTMzNDg5NDk0NjYxMTg5MjI1NA.GRHHfC.3t93_hRsTpm8HKaETbltgbk91CLqnzga9z1ixI"
 # Настройки для youtube_dl
 ytdl_format_options = {
     'format': 'bestaudio/best',
